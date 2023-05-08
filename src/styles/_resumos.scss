@@ -1,0 +1,89 @@
+@use 'variaveis';
+
+.resumos {
+    background-color: variaveis.$colorBlack;
+    padding: 5.6vw;
+    
+
+    h2 {
+        font-family: Starjhol;
+        text-align: center;
+        margin-bottom: 120px;
+        color: variaveis.$colorBotao;
+        font-size: 40px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1023px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__questions {
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            background-color: variaveis.$colorPrimaria;
+            border-radius: 20px;
+            margin: 0 auto 38px;
+
+            &__title {
+                border-radius: 20px;
+                padding: 10px;
+                font-family: Starjhol;
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                    background-color: variaveis.$colorSecundaria;
+                }
+
+                h3 {
+                    color: variaveis.$colorBotao;
+                }
+            }
+
+            &__answer {
+                height: 0;
+                overflow: hidden;
+
+            }
+
+            &--is-open {
+                .resumos__questions__item__answer {
+                padding: 24px;
+                height: auto;
+                margin: 0 auto ;
+                
+                p {
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: variaveis.$colorBranca;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 20px;
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
+                }
+
+                img {
+                    display: flex;
+                    justify-content: center;
+                    max-width: calc(20%);
+                    margin: 0 auto;
+
+                    @media (max-width: 768px) {
+                        max-width: calc(60%);
+                    }
+                }}
+            }
+        }
+    }
+}

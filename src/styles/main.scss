@@ -1,0 +1,67 @@
+@use 'variaveis';
+@use 'hero';
+@use 'shows';
+@use 'resumos';
+@use 'header';
+
+@font-face {
+    font-family: Starjedi;
+    src: url(../images/fonts/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: Starjhol;
+    src: url(../images/fonts/Starjhol.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$colorSecundaria;
+}
+
+@mixin title($fontSize: 32px) {
+    @include text($fontSize);
+    color: variaveis.$colorBranca;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$colorBranca;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(40px);
+}
+
+.title--big--logo {
+    @include title(40px);
+    color: variaveis.$colorBotao;
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(26px);
+}

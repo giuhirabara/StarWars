@@ -1,0 +1,52 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+        background-color: variaveis.$colorBlack;
+        font-family: starjhol;
+    }
+
+    &__logo {
+        max-width: 80px;
+    }
+
+    &__links {
+        display: flex;
+        font-weight: bolder;
+        font-style: italic;
+        margin: auto 0;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        &__item {
+            margin: 5px;
+            list-style: none; 
+
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: end;
+            }
+
+            a {
+                text-decoration: none;
+                background-color: variaveis.$colorBotao;
+                padding: 3px;
+                color: variaveis.$colorPrimaria;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: variaveis.$colorBotaoHover;
+                }
+            }
+        }
+    }
+}
